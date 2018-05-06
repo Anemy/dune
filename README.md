@@ -1,4 +1,4 @@
-[Dunes](https://anemy.github.io/dunes) is a generative art project.
+[Dune](https://anemy.github.io/dune) is a generative art project.
 
 ## Installation
 
