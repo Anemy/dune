@@ -6,6 +6,8 @@ import Dunes from '../utils/Dunes';
 
 const d3 = require('d3');
 
+const padding = 100;
+
 class DuneContainer extends Component {
   static propTypes = {
     height: PropTypes.number,
@@ -40,7 +42,7 @@ class DuneContainer extends Component {
 
     const dunes = new Dunes();
 
-    dunes.renderDunes(width, height, d3.select(this.svgContainerRef));
+    dunes.renderDunes(width - padding, height - padding, d3.select(this.svgContainerRef));
 
     this.rendered = true;
 
@@ -66,9 +68,9 @@ class DuneContainer extends Component {
     return (
       <svg
         className="dunes-svg"
-        height={height}
+        height={height - padding}
         ref={ref => this.svgContainerRef = ref}
-        width={width}
+        width={width - padding}
       />
     );
   }

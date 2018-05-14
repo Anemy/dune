@@ -3,8 +3,6 @@ import './App.css';
 
 import DuneContainer from './components/DuneContainer';
 
-const padding = 50;
-
 class App extends Component {
   componentWillMount() {
     this.updateDimensions();
@@ -27,12 +25,9 @@ class App extends Component {
       || document.documentElement.clientHeight
       || document.body.clientHeight;
 
-    height -= padding * 2;
-    width -= padding * 2;
-
     this.setState({
-      width,
-      height
+      width: width < height ? width : height,
+      height: width < height ? width : height
     });
   }
 

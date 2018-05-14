@@ -33,7 +33,9 @@ class Dunes {
     let time = 0;
     this.interval = setInterval(() => {
       for (let i = 0; i < duneContants.amountOfLines; i++) {
-        this.renderLine((this.height / duneContants.amountOfLines) * i, time);
+        if (Math.random() > 0.05) {
+          this.renderLine((this.height / duneContants.amountOfLines) * i, time);
+        }
       }
 
       time += duneContants.timeChangeAmount;
